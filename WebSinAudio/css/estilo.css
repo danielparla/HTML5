@@ -1,0 +1,14 @@
+header{
+    color: #010aa2;
+    text-shadow: 5px 0px 20px yellow;
+    text-align: center;
+}
+
+body{
+    
+    box-shadow: 0 0 20px 10px red;
+    background-image: url(../Imagenes/pokeball.png)
+}
+section {
+    
+}
