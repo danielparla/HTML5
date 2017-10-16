@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="http://localhost/Daniel/html/Ejercicios/validacionPhp.php" method="post">
+    Nombre:<br>
+        <input type="text" name="nombre" required>
+    <br>
+    Apellido:<br>
+        <input type="text" name="apellido" required>
+    <br>
+    Dni:<br>
+        <input type="password" name="dni" required placeholder="El Dni debe icluir una letra mayúscula sin guiones">
+    <br> 
+    Teléfono:<br>
+         <input type="tel" name="telefono" pattern="[0-9]{9}" required>
+    <br> 
+    Correo:<br>
+        <input type="email" name="correo" required>
+    <br>
+    Sexo:<br>
+        <input type="radio" name="sexo" value="chico" checked>Chico<br>
+        <input type="radio" name="sexo" value="chica">Chica<br>
+    <br>
+    Cuenta:<br>
+        <input type="text" name="cuenta" required>
+    <br>
+    Contraseña:<br>
+        <input type="password" name="password" required>
+    <br>
+    Repita contraseña:<br>
+        <input type="password" name="password2" required>
+    <br><br>
+    
+<input type="submit" value="Enviar">
+<input type="reset" value="Borrar datos">
+    
+</form> 
+
+</body>
+</html>
+
+<?php
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "Mickey Mouse\n";
+fwrite($myfile, $txt);
+$txt = "Minnie Mouse\n";
+fwrite($myfile, $txt);
+fclose($myfile);
+?>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+    
+</head>
+<body>
+
+<h2>Dime 2 numeros</h2>
+
+    <form>
+  
+        Numero 1: <input type="text" id="num1">
+        <br>
+        Numero 2: <input type="text" id="num2">
+        <br>
+        
+        <button id="mas" type="button" onclick="calculo('suma')">Mas</button><br>
+        <button id="menos" type="button" onclick="calculo('resta')">Menos</button><br>
+        <button id="por" type="button" onclick="calculo('multiplica')">Por</button><br>
+        <button id="entre" type="button" onclick="calculo('divide')">Entre</button><br>
+        
+        <p>El resultado es:<br></p>
+        <p id="reultado"></p>
+        
+    </form>
+
+
+<script>
+
+var num1=document.getElementById("num1").innerHTML;
+var num2=document.getElementById("num2").innerHTML;
+
+var resultado = 0;
+    
+    function calculo(var3){
+            
+    switch(var3){
+        case 'suma': resultado = num1+num2;
+            break;
+        case 'resta': resultado = num1-num2;
+            break;
+        case 'multiplica': resultado = num1*num2;
+            break;
+        case 'divide': resultado = num1/num2;
+            }
+        return resultado;
+        }
+    </script>
+    
+
+</body>
+</html>
