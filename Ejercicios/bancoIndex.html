@@ -1,31 +1,68 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="bancoHojaDeEstilos.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="bancoIndexJs.js"></script>
+    
+</head>    
 <body>
+    <header>
+        <title>CHUCHE BANK</title>
+        <h1>CHUCHE BANK</h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="navInicio"> INICIO</li>
+            <li id="navRegistro">REGISTRO</li>
+            <li id="navAcceso">ACCESO</li>
+        </ul>
+    </nav>
+    <aside></aside>
+    <section id="sectionRegistro">
+        <form action="http://localhost/Daniel/html/Ejercicios/bancoIndexPhp.php" method="post">
+            Nombre:<br>
+                <input type="text" name="nombre" required>
+            <br>
+            Apellido:<br>
+                <input type="text" name="apellido" required>
+            <br>
+            Dni:<br>
+                <input type="password" name="dni" required placeholder="La letra debe ir en mayuscula">
+            <br> 
+            Teléfono:<br>
+                 <input type="tel" name="telefono" pattern="[0-9]{9}" required>
+            <br>
+            Contraseña:<br>
+                <input type="password" name="password" required>
+            <br>
+            Repita contraseña:<br>
+                <input type="password" name="password2" required>
+            <br><br>
 
-<form action="http://localhost/Daniel/html/Ejercicios/bancoIndexPhp.php" method="post">
-    Nombre:<br>
-        <input type="text" name="nombre" required>
-    <br>
-    Apellido:<br>
-        <input type="text" name="apellido" required>
-    <br>
-    Dni:<br>
-        <input type="password" name="dni" required placeholder="La letra debe ir en mayuscula">
-    <br> 
-    Teléfono:<br>
-         <input type="tel" name="telefono" pattern="[0-9]{9}" required>
-    <br>
-    Contraseña:<br>
-        <input type="password" name="password" required>
-    <br>
-    Repita contraseña:<br>
-        <input type="password" name="password2" required>
-    <br><br>
-    
-<input type="submit" value="Enviar" src="bancoIndex.html">
-<input type="reset" value="Borrar datos">
-    
-</form> 
+        <input type="submit" value="Enviar" src="bancoIndex.html">
+        <input type="reset" value="Borrar datos">
 
+        </form> 
+    </section>
+    
+    <section id="sectionAcceso" hidden="hidden">
+        <form action="http://localhost/Daniel/html/Ejercicios/bancoIndexPhp.php" method="post">
+  
+            Dni:<br>
+                <input type="password" name="dni" required placeholder="La letra debe ir en mayuscula">
+            <br> 
+
+            Contraseña:<br>
+                <input type="password" name="password" required>
+            <br>
+                <input type="submit" value="Enviar" src="bancoIndex.html">sectionRegistro
+                <input type="reset" value="Borrar datos">
+
+        </form> 
+    </section>
+    
+    <input type="button" id="botonAcceder" value="ACCEDER">
+    
 </body>
 </html>

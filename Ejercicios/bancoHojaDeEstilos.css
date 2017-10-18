@@ -1,0 +1,22 @@
+h1 {color: darkorange; background-color: darkblue; text-align: center; height: 100px; padding-top: 40px; font-size: 60px;
+box-shadow: inset 0px 0px 20px 10px darkorange; border-radius: 100px;}
+
+body{
+    background-color:floralwhite ;
+     background: radial-gradient(darkblue, grey, white);
+}
+
+nav{background-color: darkblue; text-align: center; 
+box-shadow: inset 0px 0px 20px 10px darkorange; border-radius: 100px;
+
+}
+
+ul{
+    margin-left: 250px
+}
+li{
+    display: inline;
+    margin-right: 100px;
+}
+
+
