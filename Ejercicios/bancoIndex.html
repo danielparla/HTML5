@@ -13,12 +13,12 @@
     </header>
     <nav>
         <ul>
-            <li id="navInicio"> INICIO</li>
-            <li id="navRegistro">REGISTRO</li>
-            <li id="navAcceso">ACCESO</li>
+            <input class="navbutton" type="button" src="bancoIndex.html" value="Inicio">
+            <input class="navbutton" type="button" src="bancoIndex.html" value="Registro">
+            <input class="navbutton" type="button" src="bancoAcceso.html" value="Acceso">
         </ul>
     </nav>
-    <aside></aside>
+    <aside> <input type="button" id="botonAcceder" value="ACCEDER"></aside>
     <section id="sectionRegistro">
         <form action="http://localhost/Daniel/html/Ejercicios/bancoIndexPhp.php" method="post">
             Nombre:<br>
@@ -30,8 +30,8 @@
             Dni:<br>
                 <input type="password" name="dni" required placeholder="La letra debe ir en mayuscula">
             <br> 
-            Teléfono:<br>
-                 <input type="tel" name="telefono" pattern="[0-9]{9}" required>
+            Dirección:<br>
+                 <input type="text" name="direction" required>
             <br>
             Contraseña:<br>
                 <input type="password" name="password" required>
@@ -39,7 +39,7 @@
             Repita contraseña:<br>
                 <input type="password" name="password2" required>
             <br><br>
-
+<!-- TODO comprobar contraseñas iguales con js-->
         <input type="submit" value="Enviar" src="bancoIndex.html">
         <input type="reset" value="Borrar datos">
 
@@ -62,7 +62,7 @@
         </form> 
     </section>
     
-    <input type="button" id="botonAcceder" value="ACCEDER">
+   
     
 </body>
 </html>

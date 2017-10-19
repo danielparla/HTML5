@@ -7,28 +7,30 @@
     
 <?php 
     
-$usuario1= $_POST["acceso1"];
+$dni= $_POST["dni"];
 $pass1= $_POST["pass1"];
-$acceso=false;
     
-$bDatos = fopen($usuario.".txt", "r") or die("Unable to open file!");
+$acceso=comprobarPassword($dni, $pass1);
     
     
-if( fgets($bDatos)==$pass1 ){
-    $acceso=true;
-}
-    
-fclose($myfile);
-
-}
-    if($acceso==true){
-        echo "Acceso Permitido";
-        
+    switch($acceso){
+            case(0): echo "Acceso permitido";
+            break;
+            case(1): echo "La contraseña no coincide";
+            break;
+            case(2): echo "El usuario no existe";
+            break;
     }
-    elseif($acceso==false){
-        echo "ACCESO DENEGADO";}
     
-    //TODO Mostrar los datos del usuario
+if($acceso=0){
+    
+    $session_start();
+    $_SESSION["usuario"]=$dni;
+    header ("http://localhost/Daniel/html/Ejercicios/bancoCliente.html");//redirijo a la pagina del cliente. la session viaja con el enlace
+}
+  
+    
+   
 ?>     
 
 </body>

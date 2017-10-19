@@ -6,43 +6,22 @@
 <body>
     
 <?php 
+    require_once("bancobd.php");//importa el archivo php para usar sus funciones
     
-$nombre= $_POST["nombre"];
-$apellido= $_POST["apellido"];
-$dni= $_POST["dni"];
-$telefono= $_POST["telefono"];
-$pass= $_POST["password"];
-$pass2= $_POST["password2"];
+$nombre=$_POST["nombre"]." ".$_POST["apellido"];
+$dni=$_POST["dni"];
+$direc=$_POST["direction"];
+$pass=$_POST["password"];
+$pass2=$_POST["password2"];
 $error=0;
-$nombreArchivo= "C:/xampp/htdocs/daniel/HTML/Ejercicios/". $dni. ".txt";
 
-if(strcmp($pass,$pass2)==0){
-
-    $archivo= fopen($nombreArchivo, "x+");
+if($pass==$pass2){
+    insertarUsuario($nombre, $pass, $dni, $direc);
+}
+elseif($pass!=$pass2){$error=1;}
     
-        if($archivo==true){
-            fwrite($archivo, $pass."\r\n");
-            fwrite($archivo, $dni."\r\n");
-            fwrite($archivo, $nombre."\r\n");
-            fwrite($archivo, $apellido."\r\n");
-            fwrite($archivo, $telefono."\r\n");
 
-            fclose($archivo);
-        }
-        elseif($archivo==false){
-            $error=1;
-        }
-}
-elseif(strcmp($pass,$pass2)!=0){
-        $error=2;
-}
-    
-if($error==1){
-    echo "El nombre de usuario ya existe!";
-}
-if($error==2){
-    echo "Las contraseñas no coinciden!";
-}
+
     
 ?>     
 
