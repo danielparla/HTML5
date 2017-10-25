@@ -6,14 +6,13 @@
 <body>
     
 <?php 
-
+    require_once("bancobd.php");
+    session_start();
     $dni=$_SESSION["usuario"];
     $sacar= $_POST["sacar"];
     
-    ingresarSaldo($dni,$sacar);
-    header ("http://localhost/Daniel/html/Ejercicios/bancoCliente.html")
-    
-    
+    sacarDinero($dni,$sacar);
+    header ("location: http://localhost/Daniel/html/Ejercicios/bancoCliente.php");
 ?>     
 
 </body>

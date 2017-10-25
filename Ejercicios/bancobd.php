@@ -1,13 +1,14 @@
 <?php
 
 // Creamos las variables con los datos de conexión
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname= "banco";
+
 
 
 function conectar(){
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname= "banco";
 // Creamos el objeto de conexión
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -42,7 +43,7 @@ function insertarUsuario($nombre, $pass, $dni, $direc){
 // Devuelve 0 si es correcto,
 // Devuelve 1 si la contraseña no coincide,
 // Devuelve 2 si el usuario no existe.
-function comprobarPassword($nombre, $pass){
+function comprobarPassword($dni, $pass){
     $devol=0;
     //Obtenemos el objeto de conexión
     $conn = conectar();
@@ -98,7 +99,7 @@ function ingresarSaldo($dni, $saldo){
     $conn = conectar();
     
     // creamos la consulta SQL que vamos a ejecutar
-    $sql = "UPDATE clientes SET saldo=".$saldo."+ (SELECT saldo FROM clientes WHERE dni LIKE '".$dni."') WHERE dni LIKE '".$dni."'";
+    $sql = "UPDATE clientes SET saldo=".$saldo."+ (SELECT saldo WHERE dni LIKE '".$dni."') WHERE dni LIKE '".$dni."'";
     
     if ($conn->query($sql) === TRUE) {
         $sql = "SELECT saldo FROM clientes WHERE dni LIKE '".$dni."'";
@@ -122,7 +123,7 @@ function sacarDinero($dni, $saldo){
     $conn = conectar();
     
     // creamos la consulta SQL que vamos a ejecutar
-    $sql = "UPDATE clientes SET saldo=(SELECT saldo FROM clientes WHERE dni LIKE '".$dni."')-".$saldo."  WHERE dni LIKE '".$dni."'";
+    $sql = "UPDATE clientes SET saldo=(SELECT saldo WHERE dni LIKE '".$dni."')-".$saldo."  WHERE dni LIKE '".$dni."'";
     
     if ($conn->query($sql) === TRUE) {
         $sql = "SELECT saldo FROM clientes WHERE dni LIKE '".$dni."'";
