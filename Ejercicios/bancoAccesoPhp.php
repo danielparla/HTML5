@@ -6,6 +6,8 @@
 <body>
     
 <?php 
+
+    require_once("bancobd.php");//importa el archivo php para usar sus funciones
     
 $dni= $_POST["dni"];
 $pass1= $_POST["pass1"];
@@ -14,7 +16,7 @@ $acceso=comprobarPassword($dni, $pass1);
     
     
     switch($acceso){
-            case(0): echo "Acceso permitido";
+            case(0): $acceso=0;
             break;
             case(1): echo "La contraseña no coincide";
             break;
@@ -22,11 +24,15 @@ $acceso=comprobarPassword($dni, $pass1);
             break;
     }
     
-if($acceso=0){
+if($acceso==0){
     
-    $session_start();
+    session_start();
     $_SESSION["usuario"]=$dni;
-    header ("http://localhost/Daniel/html/Ejercicios/bancoCliente.html");//redirijo a la pagina del cliente. la session viaja con el enlace
+    
+    header ("location: http://localhost/Daniel/html/Ejercicios/bancoCliente.php");
+    //redirijo a la pagina del cliente. la session viaja con el enlace
+    
+   
 }
   
     

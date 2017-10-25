@@ -8,9 +8,12 @@
 <?php 
     session_start();
     $dni=$_SESSION["usuario"];
+
+    $saldo=verSaldo($dni);
     
-    echo verSaldo($dni);
-    header ("http://localhost/Daniel/html/Ejercicios/bancoCliente.html")
+    
+    
+    header ("http://localhost/Daniel/html/Ejercicios/bancoCliente.php")
     
     
 ?>     
