@@ -16,6 +16,7 @@
             <input name="NavAcceso" id="btnNavAcceso" class="btn" type="button" value="Acceso">
         </ul>
     </nav>
+    <div>
         <h2>¿Qué desea hacer hoy?</h2>
    
     <form action="bancoIngresoPhp.php" method="post">
@@ -44,7 +45,7 @@
         <input type="submit" value="Sacar">
     </form>
     <input type="button" src="bancoIndex.html" value="INICIO">
-    
+    </div>
 
 </body>
 </html>

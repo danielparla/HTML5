@@ -7,15 +7,23 @@ function comprobarPass(pass1, pass2) {
 function carga() {
     document.getElementById("sectionRegistro").style.display = "none";
     document.getElementById("sectionAcceso").style.display = "none";
+    document.getElementById("cliente").style.display = "none";
 }
 
 function mostrarRegistro() {
     document.getElementById("sectionRegistro").style.display = "block";
     document.getElementById("sectionAcceso").style.display = "none";
+    document.getElementById("cliente").style.display = "none";
 }
 function mostrarAcceso() {
     document.getElementById("sectionRegistro").style.display = "none";
     document.getElementById("sectionAcceso").style.display = "block";
+    document.getElementById("cliente").style.display = "none";
+}
+function mostrarCliente() {
+    document.getElementById("sectionRegistro").style.display = "none";
+    document.getElementById("sectionAcceso").style.display = "none";
+    document.getElementById("cliente").style.display = "block";
 }
 
 document.getElementById("btnNavInicio").addEventListener('click', carga, false);

@@ -29,7 +29,7 @@ if($acceso==0){
     session_start();
     $_SESSION["usuario"]=$dni;
     
-    header ("location: http://localhost/Daniel/html/Ejercicios/bancoCliente.php");
+    header ("location: http://localhost/Daniel/html/Ejercicios/bancoIndex.php");
     //redirijo a la pagina del cliente. la session viaja con el enlace
     
    
