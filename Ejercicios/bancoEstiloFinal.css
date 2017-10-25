@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: #dfffff;
+    
+}
+header{
+    height: 22%;
+    background-image: url(eye-899930_1280.png);
+    background-size: cover;
+    background-position: top;
+}
+body{
+    text-align: center;
+    background: linear-gradient(to bottom right, rgb(126, 0, 53),rgba(0, 0, 0, 0.83));
+    background-size: cover;
+    height:1000px;
+    align-content: center;
+}
+form{
+    height: 600px;
+    width: center 40%;
+    background: linear-gradient(to bottom right, rgb(126, 0, 53),rgba(0, 0, 0, 0));
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.btn{
+    width: 33%;
+    color: aliceblue;
+    background: none;
+    font-size: 20px;   
+}
+footer{
+    height: 22%;
+    background-image: url(eye-899930_1280.png);
+    background-position: bottom;
+    background-size: cover;
+    font-size: 25px;
+    text-align: left;
+}
