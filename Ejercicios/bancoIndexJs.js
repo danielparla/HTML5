@@ -25,6 +25,8 @@ function mostrarCliente() {
     document.getElementById("sectionAcceso").style.display = "none";
     document.getElementById("cliente").style.display = "block";
 }
+                
+document.body.addEventListener("load", carga, false);
 
 document.getElementById("btnNavInicio").addEventListener('click', carga, false);
 document.getElementById("btnNavAcceso").addEventListener('click', mostrarAcceso, false);

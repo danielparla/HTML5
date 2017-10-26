@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="bancoEstiloFinal.css"> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>BANKeye</title>
+    <?php session_start(); $usu=$_SESSION["ususario"]; ?>
     
 </head>    
-<body onload="carga()" >
+<body>
     <header>
         
         <right><quote>Miramos por ti</quote></right>
@@ -62,7 +63,7 @@
    
     <form action="bancoIngresoPhp.php" method="post">
         Ingresar dinero:<br>
-            <input type=number name="ingreso">
+            <input type="number" name="ingreso">
             <br>
             <input type="submit" value="Ingresar">
     </form>
@@ -71,25 +72,20 @@
         
         <?php 
             require_once("bancobd.php");
-        
-            session_start();
-            $dni=$_SESSION["usuario"];
 
-            $saldo=verSaldo($dni);
+            $saldo=verSaldo($usu);
             print $saldo;
         ?>
        
     <form action="bancoSustraerPhp.php" method="post">
         Sacar dinero:<br>
-            <input type=number name="sacar">
+            <input type="number" name="sacar">
     <br>
         <input type="submit" value="Sacar">
     </form>
-    <input type="button" src="bancoIndex.html" value="INICIO">
+    <input id="btnInicioCliente" type="button" value="INICIO">
     </div>
     </section>
-    
-    
         
   <script src="bancoIndexJs.js"></script>
     

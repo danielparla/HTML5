@@ -14,7 +14,7 @@
     
     ingresarSaldo($dni,$ingreso);
     
-    header ("location:http://localhost/Daniel/html/Ejercicios/bancoCliente.php");
+    header ("location:http://localhost/Daniel/html/Ejercicios/bancoIndex.php");
       
 ?>     
 
